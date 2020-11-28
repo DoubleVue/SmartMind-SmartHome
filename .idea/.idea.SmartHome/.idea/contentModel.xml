@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\HeikoWeiß\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\HeikoWeiß\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_SmartHome.1187245078.00" t="ExcludeRecursive" />
+    <e p="C:\Users\HeikoWeiß\AppData\Roaming\JetBrains\Rider2020.3\consoles\ide" t="IncludeRecursive" />
+    <e p="C:\Users\HeikoWeiß\AppData\Roaming\JetBrains\Rider2020.3\scratches" t="IncludeRecursive" />
+    <e p="D:\SmartMind-SmartHome" t="IncludeFlat">
+      <e p="_Core" t="Include" />
+      <e p="_SolutionItems" t="Include" />
+      <e p="Common.props" t="Include" />
+      <e p="LightingContext" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="SmartHome.sln" t="IncludeFlat" />
+      <e p="src\Core.Domain" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Core.Domain.csproj" t="IncludeRecursive" />
+        <e p="Model" t="Include">
+          <e p="DomainEventId.cs" t="Include" />
+          <e p="Entity.cs" t="Include" />
+          <e p="IAggregateRoot.cs" t="Include" />
+          <e p="IApplyEvent.cs" t="Include" />
+          <e p="ICommand.cs" t="Include" />
+          <e p="IDomainEvent.cs" t="Include" />
+          <e p="IHandle.cs" t="Include" />
+          <e p="IIdentity.cs" t="Include" />
+          <e p="IRepository.cs" t="Include" />
+          <e p="ValueObject.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="Core.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="src\SmartHome.Lighting.Domain.Model" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="SmartHome.Lighting.Domain.Model.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Rooms" t="Include">
+          <e p="IRoomRepository.cs" t="Include" />
+          <e p="Room.cs" t="Include" />
+          <e p="RoomDefined.cs" t="Include" />
+        </e>
+        <e p="SmartHome.Lighting.Domain.Model.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="src\SmartMind.Lighting.Application" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="SmartMind.Lighting.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Rooms" t="Include">
+          <e p="DefineNewRoomCommand.cs" t="Include" />
+          <e p="RenameRoomCommand.cs" t="Include" />
+          <e p="RoomSaga.cs" t="Include" />
+        </e>
+        <e p="SmartMind.Lighting.Application.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

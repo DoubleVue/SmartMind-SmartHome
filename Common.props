@@ -1,0 +1,35 @@
+<Project>
+    <PropertyGroup Label="Assembly">
+        <AssemblyName Condition="!$(AssemblyName.StartsWith('SmartMind.'))">SmartMind.$(AssemblyName)</AssemblyName>
+        <RootNamespace>$(AssemblyName)</RootNamespace>
+    </PropertyGroup>
+    <PropertyGroup Label="Language / Framework">
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>9.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <NullableContextOptions>enable</NullableContextOptions>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <ItemGroup>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+            <_Parameter1>$(AssemblyName).Tests</_Parameter1> <!-- Test project support -->
+        </AssemblyAttribute>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+            <_Parameter1>DynamicProxyGenAssembly2</_Parameter1> <!-- Moq support -->
+        </AssemblyAttribute>
+    </ItemGroup>
+
+    <PropertyGroup Label="Info">
+        <Company>SmartMind Software</Company>
+        <Authors>SmartMind Software Developers</Authors>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Helpers">
+        <IsWindows Condition="'$(OS)' == 'Windows_NT'">true</IsWindows>
+        <IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
+        <IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">true</IsLinux>
+    </PropertyGroup>
+
+</Project>
+

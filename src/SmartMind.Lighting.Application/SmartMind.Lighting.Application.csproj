@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">    
+    <Import Project="../../Common.props" />    
+    <ItemGroup>
+      <ProjectReference Include="..\SmartHome.Lighting.Domain.Model\SmartHome.Lighting.Domain.Model.csproj" />
+    </ItemGroup>
+</Project>
