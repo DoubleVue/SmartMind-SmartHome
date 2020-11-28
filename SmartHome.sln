@@ -1,8 +1,42 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{33E1E9FE-47B2-4D1D-88DB-2EF929D34055}"
+ProjectSection(SolutionItems) = preProject
+	Common.props = Common.props
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Core", "_Core", "{774C6B4D-2896-4962-99F8-835E82E75CD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Domain", "src\Core.Domain\Core.Domain.csproj", "{4A5D4B92-E2D4-4C22-B28B-77640210BA41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LightingContext", "LightingContext", "{EF3958A6-912D-44EB-8DA9-382D06CBB812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Lighting.Domain.Model", "src\SmartHome.Lighting.Domain.Model\SmartHome.Lighting.Domain.Model.csproj", "{755464E2-2B55-4B4F-9574-3E5D5D9D0304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartMind.Lighting.Application", "src\SmartMind.Lighting.Application\SmartMind.Lighting.Application.csproj", "{4F4ACC9B-4943-4FD0-8E19-B945C12711B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A5D4B92-E2D4-4C22-B28B-77640210BA41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5D4B92-E2D4-4C22-B28B-77640210BA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5D4B92-E2D4-4C22-B28B-77640210BA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5D4B92-E2D4-4C22-B28B-77640210BA41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755464E2-2B55-4B4F-9574-3E5D5D9D0304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755464E2-2B55-4B4F-9574-3E5D5D9D0304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755464E2-2B55-4B4F-9574-3E5D5D9D0304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755464E2-2B55-4B4F-9574-3E5D5D9D0304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F4ACC9B-4943-4FD0-8E19-B945C12711B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F4ACC9B-4943-4FD0-8E19-B945C12711B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F4ACC9B-4943-4FD0-8E19-B945C12711B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F4ACC9B-4943-4FD0-8E19-B945C12711B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A5D4B92-E2D4-4C22-B28B-77640210BA41} = {774C6B4D-2896-4962-99F8-835E82E75CD6}
+		{755464E2-2B55-4B4F-9574-3E5D5D9D0304} = {EF3958A6-912D-44EB-8DA9-382D06CBB812}
+		{4F4ACC9B-4943-4FD0-8E19-B945C12711B5} = {EF3958A6-912D-44EB-8DA9-382D06CBB812}
 	EndGlobalSection
 EndGlobal

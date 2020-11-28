@@ -1,6 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="655ee7bf-52e2-4802-bcd4-1ebfb143942e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventId.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IAggregateRoot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IApplyEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/ICommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IHandle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IIdentity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/ValueObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/RoomDefined.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RenameRoomCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartHome/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SmartHome.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SmartHome.sln" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/rc/Lighting.Domain.Model/Class1.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Core.Domain/Class1.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Core.Domain.csproj" />
+      <option value="$PROJECT_DIR$/Common.props" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Class1.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Entity.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/ICommand.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/ValueObject.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEvent.cs" />
+      <option value="$PROJECT_DIR$/rc/Lighting.Domain.Model/Class1.cs" />
+      <option value="$PROJECT_DIR$/SmartHome.Lighting.Domain.Model/Class1.cs" />
+      <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Class1.cs" />
+      <option value="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Class1.cs" />
+      <option value="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RoomApplicationService.cs" />
+      <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/Room.cs" />
+      <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/RoomDefined.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/Entity.cs" />
+      <option value="$PROJECT_DIR$/../src/PIA/pia/src/Content/Content/Message.cs" />
+      <option value="$PROJECT_DIR$/../src/PIA/pia/src/UI/WebUI/Pages/_Host.cshtml" />
+      <option value="$PROJECT_DIR$/../src/PIA/pia/src/UI/WebUI/Pages/OnDemandMessage/OnDemandMessageComponent.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1kjrbnz5yMWbRUR948Euu1EH7YE" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="655ee7bf-52e2-4802-bcd4-1ebfb143942e" name="Default Changelist" comment="" />
+      <created>1606224916082</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606224916082</updated>
+      <workItem from="1606224921982" duration="18602000" />
+    </task>
+    <task id="LOCAL-00001" summary="add empty solution">
+      <created>1606224970540</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606224970540</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/1-light-switch" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="add empty solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="add empty solution" />
   </component>
 </project>
