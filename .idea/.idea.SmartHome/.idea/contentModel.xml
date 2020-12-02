@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\HeikoWeiß\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\HeikoWeiß\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_SmartHome.1187245078.00" t="ExcludeRecursive" />
-    <e p="C:\Users\HeikoWeiß\AppData\Roaming\JetBrains\Rider2020.3\consoles\ide" t="IncludeRecursive" />
-    <e p="C:\Users\HeikoWeiß\AppData\Roaming\JetBrains\Rider2020.3\scratches" t="IncludeRecursive" />
-    <e p="D:\SmartMind-SmartHome" t="IncludeFlat">
+    <e p="C:\Users\heiko\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\heiko\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_SmartHome.1848081423.00" t="ExcludeRecursive" />
+    <e p="C:\Users\heiko\RiderProjects\SmartMind-SmartHome" t="IncludeFlat">
       <e p="_Core" t="Include" />
       <e p="_SolutionItems" t="Include" />
       <e p="Common.props" t="Include" />
@@ -17,14 +15,18 @@
         <e p="Core.Domain.csproj" t="IncludeRecursive" />
         <e p="Model" t="Include">
           <e p="DomainEventId.cs" t="Include" />
+          <e p="DomainEventPublisher.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
           <e p="IAggregateRoot.cs" t="Include" />
           <e p="IApplyEvent.cs" t="Include" />
           <e p="ICommand.cs" t="Include" />
           <e p="IDomainEvent.cs" t="Include" />
+          <e p="IDomainEventPublisher.cs" t="Include" />
+          <e p="IDomainEventSubscriber.cs" t="Include" />
           <e p="IHandle.cs" t="Include" />
           <e p="IIdentity.cs" t="Include" />
           <e p="IRepository.cs" t="Include" />
+          <e p="ISubscribable.cs" t="Include" />
           <e p="ValueObject.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

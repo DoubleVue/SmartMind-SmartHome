@@ -8,14 +8,16 @@ namespace SmartMind.Lighting.Application.Rooms
         IInitiatedBy<DefineNewRoomCommand>,
         IHandle<RenameRoomCommand>
     {
-        RoomSaga(IRoomRepository repository)
+        RoomSaga(IRoomRepository repository, IDomainEventPublisher eventPublisher)
         {
             this.repository = repository;
+            this.eventPublisher = eventPublisher;
         }
 
         private readonly IRoomRepository repository;
+        private readonly IDomainEventPublisher eventPublisher;
 
-        public async Task HandleAsync(DefineNewRoomCommand command)
+        public  async Task InitiatedByAsync(DefineNewRoomCommand command)
         {
             RoomDefined @event = new
             (
@@ -25,23 +27,24 @@ namespace SmartMind.Lighting.Application.Rooms
             var room = Room.Create(@event);
             
             await repository.SaveAsync(room);
+            await eventPublisher.PublishAsync(@event);
         }
 
         public async Task HandleAsync(RenameRoomCommand command)
         {
-            var roomId = new RoomId(command.RoomId) ;
-            var room = await  repository.GetByAsync(roomId);
+            RoomId id = new (command.RoomId) ;
+            var room = await  repository.GetByAsync(id);
+            
             RoomRenamed @event = new
             (
-                roomId,
+                id,
                 new Room.RoomTitle(command.Title)
             );
             
             room.Apply(@event);
 
             await repository.SaveAsync(room);
-
-
+            await eventPublisher.PublishAsync(@event);
         }
     }
 }

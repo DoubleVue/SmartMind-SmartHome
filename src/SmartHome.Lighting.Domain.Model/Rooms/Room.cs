@@ -11,7 +11,8 @@ namespace SmartMind.SmartHome.Lighting.Domain.Model.Rooms
         IApplyEvent<RoomRenamed>
 
     {
-        public static Room Create(RoomDefined initEvent) => new Room(new []{initEvent}, 1);
+        public static Room Create(RoomDefined initEvent) =>
+            new Room(new []{initEvent}, 1);
 
         public Room(IEnumerable<IDomainEvent> eventStream, int streamVersion)
             : base(eventStream, streamVersion)

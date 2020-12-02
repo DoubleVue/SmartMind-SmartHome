@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655ee7bf-52e2-4802-bcd4-1ebfb143942e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventId.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IAggregateRoot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IApplyEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/ICommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IHandle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IIdentity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/ValueObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/RoomDefined.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RenameRoomCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventPublisher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEventPublisher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEventSubscriber.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/ISubscribable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartHome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartHome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartHome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmartHome.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SmartHome.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core.Domain/Model/IHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core.Domain/Model/IIdentity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IIdentity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core.Domain/Model/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RoomSaga.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RoomSaga.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +31,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/2c/9fa8341e/Func`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/rc/Lighting.Domain.Model/Class1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/d6/2469c919/Action`2.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -50,12 +50,21 @@
       <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Class1.cs" />
       <option value="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Class1.cs" />
       <option value="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RoomApplicationService.cs" />
-      <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/Room.cs" />
       <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/RoomDefined.cs" />
       <option value="$PROJECT_DIR$/src/Core.Domain/Model/Entity.cs" />
       <option value="$PROJECT_DIR$/../src/PIA/pia/src/Content/Content/Message.cs" />
       <option value="$PROJECT_DIR$/../src/PIA/pia/src/UI/WebUI/Pages/_Host.cshtml" />
       <option value="$PROJECT_DIR$/../src/PIA/pia/src/UI/WebUI/Pages/OnDemandMessage/OnDemandMessageComponent.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IIdentity.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IRepository.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IHandle.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEventSubscriber.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IPublishable.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/ISubscribable.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/Test.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventPublisher.cs" />
+      <option value="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RoomSaga.cs" />
+      <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/Room.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1kjrbnz5yMWbRUR948Euu1EH7YE" />
@@ -86,6 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606224916082</updated>
       <workItem from="1606224921982" duration="18602000" />
+      <workItem from="1606583746426" duration="10172000" />
     </task>
     <task id="LOCAL-00001" summary="add empty solution">
       <created>1606224970540</created>
@@ -100,7 +110,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -124,6 +134,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
