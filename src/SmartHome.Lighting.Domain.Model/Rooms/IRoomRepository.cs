@@ -5,7 +5,7 @@ namespace SmartMind.SmartHome.Lighting.Domain.Model.Rooms
 {
     public interface IRoomRepository : IRepository<Room>
     {
-        Task<Room> GetByAsync(RoomId id);
+        Task<Room> GetAsync(RoomId id);
         Task SaveAsync(Room room);
     }
 }

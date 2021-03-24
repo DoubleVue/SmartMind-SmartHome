@@ -6,13 +6,12 @@ using SmartMind.Core.Domain.Model;
 namespace SmartMind.SmartHome.Lighting.Domain.Model.Rooms
 {
     public class Room : EventSourcedRootEntity,
-        IAggregateRoot, 
         IApplyEvent<RoomDefined>,
-        IApplyEvent<RoomRenamed>
-
+        IApplyEvent<RoomRenamed>,
+        IApplyEvent<LightSwitchedOn>,
+        IApplyEvent<LightSwitchedOff>
     {
-        public static Room Create(RoomDefined initEvent) =>
-            new Room(new []{initEvent}, 1);
+        public static Room Create(RoomDefined initEvent) => new(new[] {initEvent}, 1);
 
         public Room(IEnumerable<IDomainEvent> eventStream, int streamVersion)
             : base(eventStream, streamVersion)
@@ -25,25 +24,47 @@ namespace SmartMind.SmartHome.Lighting.Domain.Model.Rooms
 
         public RoomId Id { get; private set; } = null!;
         public RoomTitle Title { get; private set; } = null!;
+        public IEnumerable<LightDevice> LightDevices { get; private set; } = null!;
 
-        public record RoomTitle(string Value) : ValueObject;
-
+        public override IIdentity Identity => Id;
+        
         public void Apply(RoomDefined @event)
         {
             Id = @event.Id;
             Title = @event.Title;
+            LightDevices = @event.LightDevices.ToList();
         }
 
         public void Apply(RoomRenamed @event)
         {
-            if (@event.Id != Id) throw new InvalidOperationException("This event does no belong to this entity!");
-            
+            ValidateAggregateRootId(@event.Id);
             Title = @event.Title;
+        }
+
+        public void Apply(LightSwitchedOn @event)
+        {
+            ValidateAggregateRootId(@event.Id);
+
+            var lightDevice = LightDevices.First(device => device.Id == @event.LightDeviceId);
+            lightDevice.Apply(@event);
+        }
+
+        public void Apply(LightSwitchedOff @event)
+        {
+            var lightDevice = LightDevices.First(device => device.Id == @event.LightDeviceId);
+            lightDevice.Apply(@event);
+        }
+
+        private void ValidateAggregateRootId(RoomId roomId)
+        {
+            if (roomId != Id) throw new InvalidOperationException("This event does no belong to this entity!");
         }
     }
 
     public sealed record RoomId(Guid Value) : ValueObject, IIdentity<Room>
     {
-        public static RoomId NewId() => new RoomId(Guid.NewGuid());
+        public static RoomId NewId() => new (Guid.NewGuid());
     }
+
+    public sealed record RoomTitle(string Value) : ValueObject;
 }

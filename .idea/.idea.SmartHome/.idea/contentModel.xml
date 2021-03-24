@@ -14,9 +14,11 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Core.Domain.csproj" t="IncludeRecursive" />
         <e p="Model" t="Include">
+          <e p="DomainEvent.cs" t="Include" />
           <e p="DomainEventId.cs" t="Include" />
           <e p="DomainEventPublisher.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
+          <e p="EventSourcedRootEntity.cs" t="Include" />
           <e p="IAggregateRoot.cs" t="Include" />
           <e p="IApplyEvent.cs" t="Include" />
           <e p="ICommand.cs" t="Include" />
@@ -48,8 +50,12 @@
         </e>
         <e p="Rooms" t="Include">
           <e p="IRoomRepository.cs" t="Include" />
+          <e p="LightDevice.cs" t="Include" />
+          <e p="LightSwitchedOff.cs" t="Include" />
+          <e p="LightSwitchedOn.cs" t="Include" />
           <e p="Room.cs" t="Include" />
           <e p="RoomDefined.cs" t="Include" />
+          <e p="RoomRenamed.cs" t="Include" />
         </e>
         <e p="SmartHome.Lighting.Domain.Model.csproj" t="IncludeRecursive" />
       </e>

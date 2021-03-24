@@ -4,6 +4,6 @@ namespace SmartMind.Core.Domain.Model
 {
     public record DomainEventId(Guid Value) : ValueObject
     {
-        public static DomainEventId NewId() => new DomainEventId(Guid.NewGuid());
+        public static DomainEventId NewId() => new (Guid.NewGuid());
     }
 }

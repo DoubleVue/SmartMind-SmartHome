@@ -11,9 +11,7 @@ namespace SmartMind.Core.Domain.Model
         {
             publishing = false;
         }
-
-        bool publishing;
-
+        
         private List<IDomainEventSubscriber<IDomainEvent>> Subscribers { get; } = new();
 
         public async Task PublishAsync<TDomainEvent>(TDomainEvent @event) 
@@ -81,5 +79,7 @@ namespace SmartMind.Core.Domain.Model
         }
 
         private bool HasSubscribers() => Subscribers.Any();
+        
+        bool publishing;
     }
 }

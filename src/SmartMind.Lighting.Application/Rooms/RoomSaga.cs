@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using SmartMind.Core.Domain.Model;
 using SmartMind.SmartHome.Lighting.Domain.Model.Rooms;
 
@@ -14,15 +15,15 @@ namespace SmartMind.Lighting.Application.Rooms
             this.eventPublisher = eventPublisher;
         }
 
-        private readonly IRoomRepository repository;
-        private readonly IDomainEventPublisher eventPublisher;
-
         public  async Task InitiatedByAsync(DefineNewRoomCommand command)
         {
             RoomDefined @event = new
             (
                 RoomId.NewId(),
-                new Room.RoomTitle(command.Title)
+                new RoomTitle(command.Title),
+                command.LightDevices.Select(name => new LightDevice(
+                    LightDeviceId.NewId(),
+                    new LightDeviceTitle(name))).ToList()
             );
             var room = Room.Create(@event);
             
@@ -33,12 +34,12 @@ namespace SmartMind.Lighting.Application.Rooms
         public async Task HandleAsync(RenameRoomCommand command)
         {
             RoomId id = new (command.RoomId) ;
-            var room = await  repository.GetByAsync(id);
+            var room = await  repository.GetAsync(id);
             
             RoomRenamed @event = new
             (
                 id,
-                new Room.RoomTitle(command.Title)
+                new RoomTitle(command.Title)
             );
             
             room.Apply(@event);
@@ -46,5 +47,8 @@ namespace SmartMind.Lighting.Application.Rooms
             await repository.SaveAsync(room);
             await eventPublisher.PublishAsync(@event);
         }
+        
+        private readonly IRoomRepository repository;
+        private readonly IDomainEventPublisher eventPublisher;
     }
 }

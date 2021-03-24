@@ -5,16 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655ee7bf-52e2-4802-bcd4-1ebfb143942e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventPublisher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEventPublisher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEventSubscriber.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/ISubscribable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/DomainEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core.Domain/Model/EventSourcedRootEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/LightDevice.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/LightSwitchedOff.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/LightSwitchedOn.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/RoomRenamed.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartHome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartHome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SmartHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SmartHome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core.Domain/Model/IHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventPublisher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventPublisher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core.Domain/Model/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.Domain/Model/Entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core.Domain/Model/IIdentity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IIdentity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core.Domain/Model/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core.Domain/Model/IRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/IRoomRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/IRoomRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/RoomDefined.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/RoomDefined.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/DefineNewRoomCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/DefineNewRoomCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RenameRoomCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RenameRoomCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RoomSaga.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RoomSaga.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,10 +37,19 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/2c/9fa8341e/Func`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/rc/Lighting.Domain.Model/Class1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/d6/2469c919/Action`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3DD31A3-D437-4D7D-9525-D887480DAE95/8e/097ff10a/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -44,26 +60,33 @@
       <option value="$PROJECT_DIR$/src/Core.Domain/Entity.cs" />
       <option value="$PROJECT_DIR$/src/Core.Domain/ICommand.cs" />
       <option value="$PROJECT_DIR$/src/Core.Domain/Model/ValueObject.cs" />
-      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEvent.cs" />
       <option value="$PROJECT_DIR$/rc/Lighting.Domain.Model/Class1.cs" />
       <option value="$PROJECT_DIR$/SmartHome.Lighting.Domain.Model/Class1.cs" />
       <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Class1.cs" />
       <option value="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Class1.cs" />
       <option value="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RoomApplicationService.cs" />
-      <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/RoomDefined.cs" />
-      <option value="$PROJECT_DIR$/src/Core.Domain/Model/Entity.cs" />
       <option value="$PROJECT_DIR$/../src/PIA/pia/src/Content/Content/Message.cs" />
       <option value="$PROJECT_DIR$/../src/PIA/pia/src/UI/WebUI/Pages/_Host.cshtml" />
       <option value="$PROJECT_DIR$/../src/PIA/pia/src/UI/WebUI/Pages/OnDemandMessage/OnDemandMessageComponent.cs" />
-      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IIdentity.cs" />
       <option value="$PROJECT_DIR$/src/Core.Domain/Model/IRepository.cs" />
       <option value="$PROJECT_DIR$/src/Core.Domain/Model/IHandle.cs" />
       <option value="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEventSubscriber.cs" />
       <option value="$PROJECT_DIR$/src/Core.Domain/Model/IPublishable.cs" />
       <option value="$PROJECT_DIR$/src/Core.Domain/Model/ISubscribable.cs" />
       <option value="$PROJECT_DIR$/src/Core.Domain/Model/Test.cs" />
+      <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/IRoomRepository.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventId.cs" />
       <option value="$PROJECT_DIR$/src/Core.Domain/Model/DomainEventPublisher.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IApplyEvent.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/Entity.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IIdentity.cs" />
+      <option value="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RenameRoomCommand.cs" />
+      <option value="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/DefineNewRoomCommand.cs" />
+      <option value="$PROJECT_DIR$/src/Core.Domain/Model/IDomainEvent.cs" />
       <option value="$PROJECT_DIR$/src/SmartMind.Lighting.Application/Rooms/RoomSaga.cs" />
+      <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/RoomDefined.cs" />
+      <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/RoomRenamed.cs" />
+      <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/LightDevice.cs" />
       <option value="$PROJECT_DIR$/src/SmartHome.Lighting.Domain.Model/Rooms/Room.cs" />
     </changedPaths>
   </component>
@@ -83,7 +106,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -96,6 +119,8 @@
       <updated>1606224916082</updated>
       <workItem from="1606224921982" duration="18602000" />
       <workItem from="1606583746426" duration="10172000" />
+      <workItem from="1616488527910" duration="1326000" />
+      <workItem from="1616575851810" duration="12985000" />
     </task>
     <task id="LOCAL-00001" summary="add empty solution">
       <created>1606224970540</created>
@@ -118,6 +143,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
